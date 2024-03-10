@@ -15,8 +15,13 @@ ul {
     border-radius: 20px;
 }
 
+ul li {
+    padding: 10px;
+}
+
 li {
-    display: inline;
+    display: block;
+    margin: 20px 10px;
 }
 
 
@@ -77,7 +82,7 @@ h2 {
 .master-grid{
     display: grid;
     gap: 10px 30px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 0px 25px;
     height: fit-content;
 }
@@ -134,7 +139,7 @@ h2 {
     transition-timing-function: linear;
 }
 
-@media (max-width: 1000px){
+@media (min-width: 650px){
     .master-grid{
         grid-template-columns: 1fr 1fr;
         gap: 5px 10px;
@@ -146,28 +151,37 @@ h2 {
         text-align: center;
     }
     ul {
-        padding: 40px;
+        padding: 40px 10px;
     }
     ul a{
-        padding: 30px 20px;
+        padding: 30px 5px;
+    }    
+    li {
+        display: inline-block;
     }
 }
 
-@media (max-width: 650px){
+@media (min-width: 1000px){
     li {
-        display: block;
-        margin: 20px 10px;
+        display: inline;
+    }
+    .nav-list{
+        text-align: left;
     }
     .master-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
-    ul a{
-        padding: 20px;
+    .final-elt{
+        grid-row: 1;
+        grid-column: 3;
     }
     ul li {
+        padding: 0px;
+    }
+    ul{
+        padding: 20px;
+    }
+    ul a {
         padding: 10px;
     }
-
-    
 }
-
