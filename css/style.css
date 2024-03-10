@@ -123,6 +123,14 @@ h2 {
     display: list-item;
 }
 
+.mini-grid:hover{
+    background-color: darkgreen;
+    color: white;
+    transition-property: background-color, color;
+	transition-duration: 3s, 1s;
+    transition-timing-function: linear;
+}
+
 @media (max-width: 1000px){
     .master-grid{
         grid-template-columns: 1fr 1fr;
