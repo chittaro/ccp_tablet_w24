@@ -19,12 +19,6 @@ li {
     display: inline;
 }
 
-@media (max-width: 650px){
-    li {
-        display: block;
-        margin: 20px 10px;
-    }
-}
 
 li a{
     text-decoration: none;
@@ -43,7 +37,7 @@ li a:hover{
 
 
 h1 {
-    color: rgb(71, 50, 18);
+    color: black;
 }
 
 h2 {
@@ -70,6 +64,7 @@ h2 {
     position: absolute;
     left: -1000px;
     color:rgb(71, 50, 18);
+    background-color: yellow;
 }
 
 .skip:focus{
@@ -127,3 +122,41 @@ h2 {
 .ing-li {
     display: list-item;
 }
+
+@media (max-width: 1000px){
+    .master-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 5px 10px;
+    }
+    .final-elt{
+        grid-column: -1/1;
+    }
+    .nav-list{
+        text-align: center;
+    }
+    ul {
+        padding: 40px;
+    }
+    ul a{
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 650px){
+    li {
+        display: block;
+        margin: 20px 10px;
+    }
+    .master-grid {
+        grid-template-columns: 1fr;
+    }
+    ul a{
+        padding: 20px;
+    }
+    ul li {
+        padding: 10px;
+    }
+
+    
+}
+
